@@ -1,0 +1,41 @@
+Assignment No 4
+
+
+1)select Sum(UnitPrice),
+  Case
+  When UnitPrice >50 Then 'It Is >  50 '
+  from Product
+  where P_SupplierName='Exotix Liquid'
+  Group By 'CompanyName';
+
+2)select * from Employee
+  Order by JoiningDate Asc;
+
+3)SELECT column_name.
+  FROM table_name.
+  LIMIT 1
+
+4)select ProductName ,Unitprice from Product where
+  UnitPrice in (select max(UnitPrice)from Product)or
+  UnitPrice in (select min(UnitPrice)From Product);
+
+5)select ProductName ,IsDiscontinued from
+  Product Where IsDiscontinued ='False';
+
+6)select * from Product
+  where UnitInstock > UnitonOrder;
+
+7)select * from Product 
+  where P_Supplier In ('Exotic Liquid');
+
+8)select b.firstname, a.orderdate ,c.orderid,c.quantity from OrderT a
+  Customer b, OrderItem c where a.Cust_id=b.id and c.Orderid=a.id and
+  c.Quantity in (select MAX(Quantity) from OrderItem);
+
+9)select Cust_id,FirstName,SUBSTRING(FirstName,1,2)
+ from Customer 
+ where FirstName like '%RA'Order by Cust_id;
+
+10)select SUBSTRING (Companyname,1,1)
+   as Easy
+   from Product;

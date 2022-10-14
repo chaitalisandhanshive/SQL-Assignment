@@ -1,0 +1,9 @@
+Assignment No 1  (Queries)
+
+1)select * From Customer ;
+
+2)select * from Customer
+  where Country like ('A%' or 'I%');
+
+3)select * from Customer 
+  where FirstName like '--i%';

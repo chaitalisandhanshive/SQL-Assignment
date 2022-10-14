@@ -1,0 +1,37 @@
+Assignment no 2
+
+1)select * from Customer 
+  where Country in ('Germany');
+
+2)select FisrtName+LastName As FullName from Customer;
+
+3)select * from Customer where FaxNum is NOTNULL;
+
+4)select * from Customer where FirstName like '_u%';
+
+5)select *from OrderItem where UnitPrice > '10' and UnitPrice <'20';
+
+6)select * from OrderT where ShippingDate is not null orderby OrderDate;
+
+7)select C.id,C.OrderDate, D.ShipName from OrderItem a,P_Bill b,OederT c,Cust_ship d
+  
+  where a.ProductId = b.ProductId and a.OrderId=C.Id and C.Cust_Id = d.Cust_id and 
+  d.ShipName ='La corne d'abondance' and
+  C.OrderDate Between '2022-16-09' and '2022-23-07';
+
+8)select * from Product
+  where P_Supplier='Exotic Liquids';
+
+9)select avg(quantity) from OrderItem;
+
+10)select * from Product
+   where Shipping Company and ShipName='True';
+
+11)select EmployeeName + ManagerName from Employee;
+
+12)select a.id,C.ProductName ,((a.Quantity * a.UnitPrice)-b.DiscountAmt)
+   as Price from OrderItem a, P_bill b,Product  c
+   
+   where a.ProductId = b.ProductId and a.ProductId=c.id and c.package ='Exotic Liquids'
+   and a.UnitPrice>50;
+

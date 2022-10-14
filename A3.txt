@@ -1,0 +1,17 @@
+Assignment No 3
+
+1)select * from Customer
+  where Phone='030-0074321';
+
+2)select *from Product
+  where ProductCategory ='SeaFood';
+
+3)select * from Customer
+  where not City ='London';
+
+4)select * from Product
+  where ProductName = 'Chai';
+
+5)select Emp_Name, Dept_Name, Rating
+  from Employee , Department;
+
